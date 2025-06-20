@@ -1,12 +1,8 @@
 <?php get_header(); ?>
 <div class="banner-principal">
-  <div class="swiper-container">
-    <div class="swiper-wrapper">
-      <!-- Aquí deberías poner las slides dinámicas desde la API -->
-      <div class="swiper-slide">Slide 1</div>
-      <div class="swiper-slide">Slide 2</div>
-      <div class="swiper-slide">Slide 3</div>
-    </div>
+  <div class="swiper-container banner-swiper">
+    <div class="swiper-wrapper"></div>
+    
     <div class="swiper-pagination"></div>
     <div class="swiper-button-prev"></div>
     <div class="swiper-button-next"></div>

@@ -14,12 +14,31 @@ function registrar_cpt_pilares() {
 }
 add_action('init', 'registrar_cpt_pilares');
 
-function slider_plugin_scripts() {
-    wp_enqueue_style('swiper-css', 'https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css');
-    wp_enqueue_script('swiper-js', 'https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js', [], null, true);
-    wp_enqueue_script('mi-custom-js', get_stylesheet_directory_uri() . '/js/custom.js', ['swiper-js'], null, true);
+function slider_resource() {
+  wp_enqueue_style(
+    'swiper-css',
+    'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css',
+    [],
+    null
+  );
+
+  wp_enqueue_script(
+    'swiper-js',
+    'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js',
+    [],
+    null,
+    true
+  );
+
+  wp_enqueue_script(
+    'custom-js',
+    get_stylesheet_directory_uri() . '/js/swiper.js',
+    ['swiper-js'],
+    null,
+    true
+  );
 }
-add_action('wp_enqueue_scripts', 'slider_plugin_scripts');
+add_action('wp_enqueue_scripts', 'slider_resource');
 
 function font_family_resource() {
   wp_enqueue_style(

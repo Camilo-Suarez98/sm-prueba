@@ -112,7 +112,20 @@ body {
   gap: 15px
 }
 
-.banner-principal,
+.banner-principal {
+  padding: 0;
+  overflow: hidden;
+}
+
+.slide-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 100px;
+}
+
 .pilares-main-container {
   padding: 0 50px;
 }
@@ -124,6 +137,29 @@ body {
   font-size: 14px;
   line-height: 100%;
   letter-spacing: 0%;
+  text-align: center;
+}
+
+.banner-swiper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.banner-swiper .swiper-slide {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-button-prev {
+  left: 0 !important;
+}
+
+.swiper-button-next {
+  right: 0 !important;
+}
+
+.slider-text {
   text-align: center;
 }
 
@@ -194,5 +230,9 @@ body {
   .banner-principal,
   .pilares-main-container {
     padding: 0 20px;
+  }
+
+  .slide-content {
+    padding: 0 25px;
   }
 }
