@@ -27,8 +27,10 @@
     
       <div class="header-extras">
         <form class="search-form" role="search" method="get" action="<?php echo home_url('/'); ?>">
-          <input type="search" name="s" placeholder="Buscar">
-          <button type="submit">🔍</button>
+          <input type="search" name="s" />
+          <button type="submit">
+            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/search-desktop.png" alt="Search">
+          </button>
         </form>
         
         <div class="social-icons">

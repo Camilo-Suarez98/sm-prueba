@@ -45,6 +45,26 @@ body {
   display: flex;
 }
 
+.search-form {
+  position: relative;
+}
+
+.search-form input {
+  height: 24px;
+  border-radius: 15px;
+  border: none;
+}
+
+.search-form button {
+  background: #003E6D;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  border-radius: 50%;
+  border: none;
+}
+
 .search-form-mobile {
   display: none;
 }
@@ -84,6 +104,12 @@ body {
   background: none;
   border: none;
   color: white;
+}
+
+.social-icons {
+  display: flex;
+  align-items: center;
+  gap: 15px
 }
 
 .banner-principal,
@@ -152,7 +178,8 @@ body {
   }
 
   .main-menu,
-  .second-line-menu {
+  .second-line-menu,
+  .search-form {
     display: none;
   }
 
@@ -160,9 +187,6 @@ body {
     display: block;
   }
 
-  .search-form {
-    display: none;
-  }
   .nav-options {
     padding: 0;
   }
