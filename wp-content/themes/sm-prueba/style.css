@@ -1,0 +1,59 @@
+/*
+Theme Name: sm-prueba
+Author: Camilo Suarez
+Version: 1.0
+*/
+
+body {
+  margin: 0;
+}
+
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(180deg, #003E6D 0%, rgba(0, 62, 109, 0.8) 55.73%, rgba(0, 62, 109, 0) 100%);
+  color: white;
+}
+
+.main-menu {
+  display: flex;
+}
+
+.main-menu ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.menu-toggle {
+  display: none; /* Oculto en desktop */
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: white;
+}
+
+.pilares-main-text {
+  color: #003E6D;
+  font-family: Montserrat;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .main-menu {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .search-form {
+    display: none;
+  }
+}
