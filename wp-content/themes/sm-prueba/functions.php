@@ -1,4 +1,6 @@
 <?php
+add_theme_support('post-thumbnails');
+
 add_action( 'wp_enqueue_scripts', function() {
   wp_enqueue_style( 'parent-style', get_template_directory_uri() . '/style.css' );
 });
@@ -53,3 +55,21 @@ function font_family_resource() {
   );
 }
 add_action('wp_enqueue_scripts', 'font_family_resource');
+
+function add_pilars() {
+  $labels = [
+    'name' => 'Pilares',
+    'singular_name' => 'Pilar',
+  ];
+
+  $args = [
+    'labels' => $labels,
+    'public' => true,
+    'has_archive' => false,
+    'rewrite' => ['slug' => 'pilares'],
+    'supports' => ['title', 'editor', 'thumbnail'],
+    'show_in_rest' => true,
+  ];
+  register_post_type('pilar', $args);
+}
+add_action('init', 'add_pilars');
