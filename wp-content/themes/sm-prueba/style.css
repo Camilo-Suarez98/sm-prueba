@@ -6,18 +6,70 @@ Version: 1.0
 
 body {
   margin: 0;
+  max-width: 1280px;
+  margin: 0 auto;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .site-header {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
   background: linear-gradient(180deg, #003E6D 0%, rgba(0, 62, 109, 0.8) 55.73%, rgba(0, 62, 109, 0) 100%);
   color: white;
+  padding: 0 50px;
+}
+
+.navigation-complete {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.nav-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 50px;
+}
+
+.nav-options .main-menu a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+.nav-options .main-menu {
+  gap: 25px;
 }
 
 .main-menu {
   display: flex;
+}
+
+.search-form-mobile {
+  display: none;
+}
+
+.header-extras {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.second-line-menu {
+  padding: 0 50px;
+  width: 100%;
+}
+
+.second-line-menu .main-menu {
+  display: flex;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+.second-line-menu .main-menu a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 12px;
 }
 
 .main-menu ul {
@@ -27,11 +79,16 @@ body {
 }
 
 .menu-toggle {
-  display: none; /* Oculto en desktop */
+  display: none;
   font-size: 24px;
   background: none;
   border: none;
   color: white;
+}
+
+.banner-principal,
+.pilares-main-container {
+  padding: 0 50px;
 }
 
 .pilares-main-text {
@@ -45,7 +102,57 @@ body {
 }
 
 @media (max-width: 768px) {
-  .main-menu {
+  .site-header {
+    padding: 0 20px;
+    background-color: #003E6D;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-right: 50px;
+  }
+
+  .logo .logo-img {
+    width: 60px;
+  }
+
+  .search-form-mobile {
+    position: relative;
+    display: block;
+  }
+
+  .search-form-mobile .search {
+    width: 100%;
+    padding: 8px;
+    background-color: #fff;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .header-extras,
+  .header-extras .social-icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .header-extras .social-icons a {
+    width: 16px;
+    height: 16px;
+  }
+
+  .header-extras .social-icons a > img {
+    width: 100%;
+  }
+
+  .main-menu,
+  .second-line-menu {
     display: none;
   }
 
@@ -55,5 +162,13 @@ body {
 
   .search-form {
     display: none;
+  }
+  .nav-options {
+    padding: 0;
+  }
+
+  .banner-principal,
+  .pilares-main-container {
+    padding: 0 20px;
   }
 }
